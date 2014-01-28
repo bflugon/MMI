@@ -5,11 +5,11 @@ public class Person {
     private String name;
     private String dateOfBirth;
     private String email;
-    private int height;
+    private float height;
     private Gender gender;
 
     public enum Gender {
-        male, female
+        Male, Female
     }
 
 
@@ -25,7 +25,7 @@ public class Person {
         return email;
     }
 
-    public int getHeight() {
+    public float getHeight() {
         return height;
     }
 
@@ -45,7 +45,7 @@ public class Person {
         this.email = email;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(float height) {
         this.height = height;
     }
 

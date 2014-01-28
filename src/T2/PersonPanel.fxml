@@ -1,6 +1,9 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.GridPane?>
 
+
+<?import javafx.collections.FXCollections ?>
+<?import java.lang.String ?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -11,17 +14,27 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Slider?>
 <GridPane fx:controller="T2.PersonPanelController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-    <Text text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-    <TextField fx:id="name" GridPane.columnIndex="1" GridPane.rowIndex="0" onKeyTyped="#update"/>
-    <Text text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-    <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="1" onKeyTyped="#update"/>
-    <Text text="Date of birth:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-    <TextField fx:id="dateOfBirth" GridPane.columnIndex="1" GridPane.rowIndex="2" onKeyTyped="#update"/>
-    <Text text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-    <ComboBox fx:id="gender" GridPane.rowIndex="3" GridPane.columnIndex="1">
 
+    <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="name" GridPane.columnIndex="1" GridPane.rowIndex="0" onKeyTyped="#update"/>
+
+    <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="1" onKeyTyped="#update"/>
+
+    <Label text="Date of birth:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="dateOfBirth" GridPane.columnIndex="1" GridPane.rowIndex="2" onKeyTyped="#update"/>
+
+    <Label text="Gender:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <ComboBox fx:id="gender" GridPane.rowIndex="3" GridPane.columnIndex="1" value="choose" onAction="#update">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Male" />
+                <String fx:value="Female" />
+            </FXCollections>
+        </items>
     </ComboBox>
-    <Text GridPane.columnIndex="0" GridPane.rowIndex="4" text="Height:"/>
-    <Slider GridPane.rowIndex="4" GridPane.columnIndex="1" fx:id="height" max="220" min="120" snapToTicks="true" showTickMarks="true"/>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="4" text="Height:"/>
+    <Slider GridPane.rowIndex="4" GridPane.columnIndex="1" fx:id="height" max="220" min="120" snapToTicks="true" showTickMarks="true" showTickLabels="true"/>
 
 </GridPane>

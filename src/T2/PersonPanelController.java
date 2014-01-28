@@ -15,9 +15,14 @@ public class PersonPanelController {
 
     private Person model;
 
-    public void action(ActionEvent actionEvent) {
+
+    public void update(){
         if (model != null) {
-            setModel(null);
+        model.setName(name.getText());
+        model.setDateOfBirth(dateOfBirth.getText());
+        model.setEmail(email.getText());
+        model.setHeight((float)height.getValue());
+        model.setGender((Person.Gender) gender.getValue());
         }
     }
 
