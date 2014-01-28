@@ -10,14 +10,13 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Slider?>
-<GridPane fx:controller="T2.PersonPanelController"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<GridPane fx:controller="T2.PersonPanelController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
     <Text text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-    <TextField fx:id="name" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <TextField fx:id="name" GridPane.columnIndex="1" GridPane.rowIndex="0" onKeyTyped="#update"/>
     <Text text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-    <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="1" onKeyTyped="#update"/>
     <Text text="Date of birth:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-    <TextField fx:id="dateOfBirth" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <TextField fx:id="dateOfBirth" GridPane.columnIndex="1" GridPane.rowIndex="2" onKeyTyped="#update"/>
     <Text text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
     <ComboBox fx:id="gender" GridPane.rowIndex="3" GridPane.columnIndex="1">
 

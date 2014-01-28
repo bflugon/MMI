@@ -5,9 +5,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 
-/**
- * Created by bard on 1/17/14.
- */
+
 public class PersonPanelController {
     public TextField name;
     public TextField email;
@@ -19,11 +17,20 @@ public class PersonPanelController {
 
     public void action(ActionEvent actionEvent) {
         if (model != null) {
-            setModel();
+            setModel(null);
         }
     }
 
-    public void setModel() {
+    public Person getModel() {
+        return model;
+    }
+
+    public void setModel(Person person) {
+        this.model = person;
+        name.setText(person.getName());
+        email.setText(person.getEmail());
+        dateOfBirth.setText(person.getDateOfBirth());
+        height.setValue(person.getHeight());
 
     }
 }
