@@ -1,0 +1,19 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ToggleGroup?>
+<GridPane fx:controller="T1.ButtonsNTextController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <TextField GridPane.columnIndex="1" fx:id="textField" onAction="#handleAction" onKeyReleased="#handleCont" onKeyTyped="#handleCont" />
+    <fx:define>
+        <ToggleGroup fx:id="grp"/>
+    </fx:define>
+    <ToggleButton GridPane.columnIndex="2" text="Upper case" fx:id="btn1" toggleGroup="$grp" onAction="#upperCase"/>
+    <ToggleButton GridPane.columnIndex="3" text="Lower case" fx:id="btn2" toggleGroup="$grp" onAction="#lowerCase"/>
+    <CheckBox GridPane.columnIndex="4" text="Continuous?" fx:id="checkbox" onAction="#handleChk"/>
+</GridPane>

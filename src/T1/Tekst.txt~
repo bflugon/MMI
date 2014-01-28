@@ -1,0 +1,5 @@
+Jeg brukte fx sin innebygde funksjon til å kalle metoder i kontrolleren når knapper og sjekkbokser ble trykket og når teksfelt blir fylt. Dette er alle syntaktiske hendelser, leksikalske hendelser er ikke brukt.
+
+Syntaktiske er lettere å håndtere, ettersom det er bygd opp av flere leksikalske hendelser.
+
+Jeg brukte ingen leksikalske hendelser

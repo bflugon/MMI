@@ -1,0 +1,5 @@
+Jeg brukte fx sin innebygde funksjon til å kalle metoder i kontrolleren når knapper og sjekkbokser ble trykket, såkalte syntaktiske hendelser. Jeg brukte det samme til utfyllelsen av tekstboksen, såkalt leksikalsk hendelse. 
+
+Syntaktiske hendelser er klikk på knapper og lignnde, og er derfor lettere å implementere enn leksikalske hendelser.
+
+Jeg kunne laget et skjermtastatur.
