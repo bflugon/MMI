@@ -13,6 +13,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Slider?>
+<?import T2.Gender?>
 <GridPane fx:controller="T2.PersonPanelController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
 
     <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
@@ -25,16 +26,16 @@
     <TextField fx:id="dateOfBirth" GridPane.columnIndex="1" GridPane.rowIndex="2" onKeyTyped="#update"/>
 
     <Label text="Gender:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-    <ComboBox fx:id="gender" GridPane.rowIndex="3" GridPane.columnIndex="1" value="choose" onAction="#update">
+    <ComboBox fx:id="gender" GridPane.rowIndex="3" GridPane.columnIndex="1" value="Male" onAction="#update">
         <items>
             <FXCollections fx:factory="observableArrayList">
-                <String fx:value="Male" />
-                <String fx:value="Female" />
+                <Gender fx:value="MALE" />
+                <Gender fx:value="FEMALE" />
             </FXCollections>
         </items>
     </ComboBox>
 
     <Label GridPane.columnIndex="0" GridPane.rowIndex="4" text="Height:"/>
-    <Slider GridPane.rowIndex="4" GridPane.columnIndex="1" fx:id="height" max="220" min="120" snapToTicks="true" showTickMarks="true" showTickLabels="true"/>
+    <Slider GridPane.rowIndex="4" GridPane.columnIndex="1" fx:id="height" max="220" min="120" snapToTicks="true" showTickMarks="true" showTickLabels="true" majorTickUnit="10"/>
 
 </GridPane>

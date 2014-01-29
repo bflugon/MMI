@@ -10,7 +10,7 @@ public class PersonPanelController {
     public TextField name;
     public TextField email;
     public TextField dateOfBirth;
-    public ComboBox gender;
+    public ComboBox<Gender> gender;
     public Slider height;
 
     private Person model;
@@ -22,7 +22,8 @@ public class PersonPanelController {
         model.setDateOfBirth(dateOfBirth.getText());
         model.setEmail(email.getText());
         model.setHeight((float)height.getValue());
-        model.setGender((Person.Gender) gender.getValue());
+        model.gender = gender.getValue();
+            System.out.println("Model updated");
         }
     }
 
@@ -36,6 +37,7 @@ public class PersonPanelController {
         email.setText(person.getEmail());
         dateOfBirth.setText(person.getDateOfBirth());
         height.setValue(person.getHeight());
+        gender.setValue(model.getGender());
 
     }
 }

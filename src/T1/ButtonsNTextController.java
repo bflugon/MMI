@@ -34,20 +34,20 @@ public class ButtonsNTextController {
         }
         else if (btn2.isSelected()) {
             lowerCase();
-        }
-    }
+        }}
 
-    public void handleCont() {
-        if (checkbox.isSelected()) {
+
+    public void handleEnter() {
+
             int pos = textField.getCaretPosition();
             handleAction();
             textField.positionCaret(pos);
-        }
+
     }
 
-    public void handleChk(ActionEvent actionEvent) {
+    public void handleChk() {
         if (checkbox.isSelected()) {
-            handleAction();
+            handleEnter();
         }
     }
 }

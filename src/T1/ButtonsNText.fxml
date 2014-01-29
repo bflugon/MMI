@@ -9,7 +9,7 @@
 <?import javafx.scene.control.ToggleGroup?>
 <GridPane fx:controller="T1.ButtonsNTextController"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-    <TextField GridPane.columnIndex="1" fx:id="textField" onAction="#handleAction" onKeyReleased="#handleCont" onKeyTyped="#handleCont" />
+    <TextField GridPane.columnIndex="1" fx:id="textField" onAction="#handleEnter" onKeyReleased="#handleChk" onKeyTyped="#handleChk" />
     <fx:define>
         <ToggleGroup fx:id="grp"/>
     </fx:define>

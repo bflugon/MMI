@@ -6,11 +6,7 @@ public class Person {
     private String dateOfBirth;
     private String email;
     private float height;
-    private Gender gender;
-
-    public enum Gender {
-        Male, Female
-    }
+    public Gender gender;
 
 
     public String getName() {
