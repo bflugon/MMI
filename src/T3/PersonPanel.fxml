@@ -1,29 +1,39 @@
-<?import javafx.collections.FXCollections?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import T2.Gender?>
-<GridPane fx:controller="T2.PersonPanelController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.collections.*?>
+<?import java.lang.*?>
 
-    <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-    <TextField fx:id="name" GridPane.columnIndex="1" GridPane.rowIndex="0" onKeyTyped="#update"/>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ChoiceBox?>
 
-    <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-    <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="1" onKeyTyped="#update"/>
-
-    <Label text="Date of birth:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-    <TextField fx:id="dateOfBirth" GridPane.columnIndex="1" GridPane.rowIndex="2" onKeyTyped="#update"/>
-
-    <Label text="Gender:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-    <ComboBox fx:id="gender" GridPane.rowIndex="3" GridPane.columnIndex="1" value="Male" onAction="#update">
-        <items>
-            <FXCollections fx:factory="observableArrayList">
-                <Gender fx:value="MALE" />
-                <Gender fx:value="FEMALE" />
-            </FXCollections>
-        </items>
-    </ComboBox>
-
-    <Label GridPane.columnIndex="0" GridPane.rowIndex="4" text="Height:"/>
-    <Slider GridPane.rowIndex="4" GridPane.columnIndex="1" fx:id="height" max="220" min="120" snapToTicks="true" showTickMarks="true" showTickLabels="true" majorTickUnit="10"/>
-
+<?import T3.Gender ?>
+<GridPane fx:controller="T3.PersonPanelController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    
+    <Label GridPane.columnIndex="1" GridPane.rowIndex="1" text="Name" />
+    <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" fx:id="nameField" onAction="#updateModel" prefWidth="240.0" />
+    
+    <Label GridPane.columnIndex="1" GridPane.rowIndex="2" text="Date of Birth"  />
+    <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" fx:id="dateField" onAction="#updateModel" prefWidth="240.0" />
+    
+    
+    <Label GridPane.columnIndex="1" GridPane.rowIndex="3" text="Gender" />
+    <ChoiceBox GridPane.columnIndex="2" GridPane.rowIndex="3" fx:id="genderMenu" value="choose" onValueChange="#updateModel" prefWidth="240.0">
+    	<items>
+        	<FXCollections fx:factory="observableArrayList">
+        		<Gender fx:value="MALE" />
+				<Gender fx:value="FEMALE" />
+			</FXCollections>
+		</items>
+    </ChoiceBox>
+    
+    
+    <Label GridPane.columnIndex="1" GridPane.rowIndex="4" text="Email" />
+    <TextField GridPane.columnIndex="2" GridPane.rowIndex="4" fx:id="emailField" onAction="#updateModel" prefWidth="240.0" />
+    
+    <Label GridPane.columnIndex="1" GridPane.rowIndex="5" text="Height" />
+    <Slider GridPane.columnIndex="2" GridPane.rowIndex="5" fx:id="heightSlider" showTickMarks="true" 
+    	showTickLabels="true" min="120" max="220" majorTickUnit="10" minorTickCount="5"  prefWidth="240.0" onValueChange="#updateModel"/>
+    
 </GridPane>
